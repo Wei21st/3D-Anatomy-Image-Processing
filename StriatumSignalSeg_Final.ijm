@@ -1,0 +1,10 @@
+run("Brightness/Contrast...");
+run("Enhance Contrast", "saturated=0.35");
+wait(1000);
+run("Trainable Weka Segmentation");
+wait(1000);
+selectWindow("Trainable Weka Segmentation v3.2.34");
+wait(1000);
+call("trainableSegmentation.Weka_Segmentation.loadClassifier", "G:\\ZhangWei_Registration\\STR_Somata_classifier.model");
+wait(10000);
+call("trainableSegmentation.Weka_Segmentation.getResult");
